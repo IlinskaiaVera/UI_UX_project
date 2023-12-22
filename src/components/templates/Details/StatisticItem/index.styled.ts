@@ -13,7 +13,7 @@ export const StatisticItem = styled.div`
 `;
 
 export const Icon = styled.div`
-    color: ${props => props.theme.accentColor1};
+    color: #e3d578; //измение цвета иконочек статистики
     font-size: ${props => props.theme.textSizeTitle};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle700};

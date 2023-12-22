@@ -15,12 +15,12 @@ const Pagination: React.FC<PaginationProps> = (props) => {
   let portionSize = 5;
 
   if (useWindowSize()[0] > 900) {
-    portionSize = 10;
+    portionSize = 15;
   } else {
     portionSize = 5;
   }
   if (useWindowSize()[0] < 300) {
-    portionSize = 3;
+    portionSize = 5;
   }
 
   let pages = [];

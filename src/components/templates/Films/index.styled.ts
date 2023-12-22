@@ -51,6 +51,7 @@ export const Title = styled.span`
     margin: 50px 0px;
     align-items: center;
     box-sizing: border-box;
+    text-shadow: ${props => props.theme.textShadow};
     font-size: ${props => props.theme.textSizeTitle};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle700};

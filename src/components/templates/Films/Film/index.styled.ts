@@ -1,5 +1,6 @@
 import styled from "styled-components"
 export const Card2 = styled.div`
+    top: 60px;
     position: absolute;
     aspect-ratio: 1/1/5;
     display: flex;
@@ -16,11 +17,12 @@ export const Card2 = styled.div`
     pointer-events: none;
     transition: 0.3s;
     padding: 20px;
-    color: white; 
+    color: #f7c6e8; //изменение текста вкладки фильма
 `;
 
 export const Rating = styled.div`
-    display: flex;
+    margin: 0px 0px 50px 0px; //changed
+    display: block; //changed
     flex: 0 0 auto;
     width: 100%;
     height: 30%;
@@ -34,8 +36,7 @@ export const RatingIcon = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-    color:  ${props=> props.theme.accentColor1};
+    color:  #e3d578; //изменение цвета иконки звёздочки вкладки фильма
     font-size: ${props=> props.theme.textSizeTitle};
 `;
 export const RatingText = styled.div`
@@ -48,9 +49,10 @@ export const RatingText = styled.div`
 `;
 
 export const Genres = styled.div`
+    margin: 60px 0px; //changed
     width: 100%;
     height: 50%;
-    display: flex;
+    display: block; //changed
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,17 +72,17 @@ export const Details = styled.button`
     cursor: pointer;
     border: 0;
     width: 100%;
-    margin: 10px 0px;
+    margin: 10px 0px; //отступ
     height: 40px;
     flex: 0 0 auto;
     border-radius: 10px;
-    background-color:  ${props => props.theme.accentColor1};
-    color: white;
-  
+    background-color: #d143a6; //измение цвета кнопки Details
+    color: #f7c6e8; //изменение текста кнопки Details
+    font-family: "Monotype Corsiva"; //саморучно прописали шрифт
     font-size: ${props=> props.theme.textSizeL};
     font-weight: 600;
     &:hover{
-        background-color: rgba(106,192,69,0.9);
+        background-color: #eb6cc4; //изменение цвета при наведении на кнопку
     }
 `;
 
@@ -144,6 +146,7 @@ export const Name = styled.div`
     box-sizing: border-box;
     text-overflow: ellipsis;   
     white-space: nowrap;
+    text-shadow: ${props => props.theme.textShadow};
     @media (max-width: 992px) and (min-width: 768px)  {
         font-size: ${props => props.theme.textSizeTextM900};
     }

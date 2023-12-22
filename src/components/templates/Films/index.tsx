@@ -6,7 +6,7 @@ import * as Style from "./index.styled";
 
 const Films = () => {
   const [page, setPage] = useState(1);
-  const pageSize = 10;
+  const pageSize = 5;
   const { filmList, isLoading } = useFilmList(String(page), String(pageSize));
 
   const filmsList = filmList?.data.movies.map((film) => {

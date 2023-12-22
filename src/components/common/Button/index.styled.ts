@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+//кнопка смены стилей
 export const Button = styled.button`
     display: flex;
     flex: 0 0 auto;
@@ -10,12 +11,12 @@ export const Button = styled.button`
     border: 0;
     justify-content: center;
     align-items: center;
-    background-color: ${props => props.theme.iconColor};
+    background-color: ${props => props.theme.iconColor}; 
     box-shadow: 0px 0px 5px ${props => props.theme.shadowColor} ;
     color: ${props => props.theme.textColor};
     &:hover{
-        background-color: ${props => props.theme.accentColor1};
-        color: white;
+        background-color: #d143a6; //changed, цвет когда мы наводим на кнопочку
+        color: #f7c6e8; /changed, цвет иконки когда мы наводим на кнопку
         transition: 0.1s;
     }
     &:focus{

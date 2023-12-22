@@ -1,11 +1,11 @@
-import { GiFilmStrip } from "react-icons/gi";
+import { GrAed } from "react-icons/gr";
 import * as Style from "./index.styled";
 
 const Loader = () => {
   return (
     <Style.Loader>
       <Style.Icon>
-        <GiFilmStrip />
+        <GrAed />
       </Style.Icon>
       <Style.Text>Loading...</Style.Text>
     </Style.Loader>

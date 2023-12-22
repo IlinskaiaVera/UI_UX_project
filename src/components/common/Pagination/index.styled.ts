@@ -19,6 +19,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  text-shadow: ${props => props.theme.textShadow};
  
 `;
 
@@ -39,8 +40,8 @@ export const Item = styled.div`
   transition: 0.1s;
   &:hover{
     transition: 0.1s;
-    color: white;
-    background-color:${props => props.theme.accentColor1};
+    color: #f7c6e8; // цвет текста (номера) кнопки страницы
+    background-color: #d143a6; //цвет кнопки страницы
    
   }
   margin: 0px 10px 0px 0px;
@@ -50,6 +51,6 @@ export const Item = styled.div`
 `;
 
 export const ActiveItem = styled(Item)`
-  color: white;
-  background-color:${props => props.theme.accentColor1};
+  color: #f7c6e8; // цвет текста (номера) активной кнопки страницы
+  background-color: #d143a6; // цвет кнопки активной страницы
 `;

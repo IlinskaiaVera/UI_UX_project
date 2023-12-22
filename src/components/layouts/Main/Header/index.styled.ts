@@ -13,12 +13,14 @@ export const Header = styled.header`
     position: sticky;
     overflow: hidden;
     z-index: 50;
+    text-shadow: ${props => props.theme.textShadow};
     @media (max-width: 768px) and (min-width: 576px)  { 
         min-height: 60px;
     }
     @media (max-width: 576px)  {
         min-height: 60px;
     }
+    
 `;
 
 export const Content = styled.div`
@@ -58,14 +60,15 @@ export const Logo = styled.div`
 
 export const Img = styled.img`
     display: flex;
-    height: 30px;
+    height: 60px; //changed, изменение размера картинки в Header
 `;
 export const Name = styled.span`
     display: flex;
     align-items: center;
-    font-size: ${props => props.theme.textSizeTextM};
+    font-size: 25px; //changed, размер надписи в хэдере
     font-weight: 500;
-    font-family: Roboto;
+    text-shadow: ${props => props.theme.textShadow};
+    font-family: Monotype Corsiva; //changed, шрифт надписи в хэдере
     letter-spacing: 1px;
     margin: 5px 0px 0px 0px;
     @media (max-width: 768px) and (min-width: 576px)  {

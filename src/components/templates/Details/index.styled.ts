@@ -50,6 +50,7 @@ export const ContentTitle = styled.span`
     margin: 50px 0px;
     align-items: center;
     box-sizing: border-box;
+    text-shadow: ${props => props.theme.textShadow};
     font-size: ${props => props.theme.textSizeTitle};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle700};
@@ -58,14 +59,14 @@ export const ContentTitle = styled.span`
         font-size: ${props => props.theme.textSizeTitle500};
     }
     & a{
-        font-family: Roboto;
+        font-family: Monotype Corsiva; //изменение шрифта строки фильма во вкладке фильма
         font-size:  ${props => props.theme.textSizeTitle};
         font-weight: 500;
         letter-spacing: 1px;
         transition: 0.3s;
         &:hover{
             transition: 0.3s;
-            color: ${props => props.theme.accentColor1};
+            color: #f7c6e8; //изменение цвета названия надписи фильма при наведение
         }
     }
 `;
@@ -140,7 +141,7 @@ export const Button = styled.a`
     height: 40px;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
     background-color: aqua;
     border: 0px;
     border-radius:10px;
@@ -150,10 +151,18 @@ export const Button = styled.a`
     }
 `;
 export const DownloadButton = styled(Button)`
-    background-color: ${props=>props.theme.accentColor1};
+    background-color: ${props => props.theme.iconColor}; //смена цвета кнопки download
+    box-shadow: 0px 0px 5px ${props => props.theme.shadowColor};
+    &:hover{
+        color: #f7c6e8; //изменение цвета текста кнопки торрента при навождении
+        transition: 0.3s;
+        background-color: #d143a6; //изменение цвета кнопки торрента при навождении
+    }
 `;
 export const WatchButton = styled(Button)`
-    background-color:${props=>props.theme.accentColor2};
+    color: black;
+    background-color: #e3d578; //смена цвета кнопка watch now
+    box-shadow: 0px 0px 5px ${props => props.theme.shadowColor};
 `;
 
 export const Description = styled.div`
@@ -162,6 +171,7 @@ export const Description = styled.div`
     align-self: flex-start;
     grid-template-columns: 1fr;
     grid-gap: 20px;
+    text-shadow: ${props => props.theme.textShadow};
 `;
 
 export const Title = styled.div`
@@ -169,6 +179,7 @@ export const Title = styled.div`
     font-size: ${props=> props.theme.textSizeTitle};
     letter-spacing: 1px;
     font-weight: 500;
+    text-shadow: ${props => props.theme.textShadow};
 `;
 
 export const Year = styled.div`
@@ -219,6 +230,7 @@ export const TorrentsTitle = styled.div`
     font-weight: 600;
     font-size: ${props=> props.theme.textSizeTextL};
     color: ${props=> props.theme.textColor};
+    text-shadow: ${props => props.theme.textShadow};
 `;
 
 export const Torrents = styled.div`
@@ -227,5 +239,21 @@ export const Torrents = styled.div`
     grid-gap: 10px;
 `;
 
+export const CommentsTitle = styled.div`
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    font-weight: 600;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.textColor};
+`;
+
+export const CommentItem = styled.div`
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.textColor};
+`;
 
 

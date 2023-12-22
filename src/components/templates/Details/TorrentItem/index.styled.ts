@@ -11,9 +11,9 @@ export const Torrent = styled.a`
     box-shadow: 0px 0px 3px ${props => props.theme.shadowColor};
     transition: 0.3s;
     &:hover{
-        color: white;
+        color: #f7c6e8; //изменение цвета текста кнопки торрента при навождении
         transition: 0.3s;
-        background-color:  ${props => props.theme.accentColor1};
+        background-color: #d143a6; //изменение цвета кнопки торрента при навождении
     }
 `;
 export const Content = styled.div`
@@ -46,6 +46,7 @@ export const Text = styled.div`
   height: 30px;
   font-size: ${props => props.theme.textSizeTextM};
   align-items: center;
+  
   @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTextM700};
     }

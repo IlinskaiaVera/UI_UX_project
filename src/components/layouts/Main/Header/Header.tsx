@@ -11,8 +11,10 @@ const Header: React.FC<HeaderProps> = (props) => {
     <Style.Header id="header">
       <Style.Content>
         <Style.Logo>
-          <Style.Img src="https://yts.mx/assets/images/website/logo-YTS.svg"></Style.Img>
-          <Style.Name>HD movies at the smallest file size.</Style.Name>
+          {/*Изменение картинки сайта*/}
+          <Style.Img src="https://yt3.googleusercontent.com/_NSzIcxbeWPxBGQ7PAsqTjIdw8WE4UsSE1KHM3coO3lbX6uWFrUgdqpQEsS6QwBjy-WlvC6TDw=s900-c-k-c0x00ffffff-no-rj">
+          </Style.Img>
+          <Style.Name>Watch movies and wear pink!</Style.Name> {/*Изменение заглавной надписи*/}
         </Style.Logo>
 
         <Style.Buttons>

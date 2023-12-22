@@ -10,6 +10,10 @@ const Film: React.FC<MovieList> = (props) => {
       <Link href={`/films/${props.id}`}>
         <Style.Content>
           <Style.Cards>
+            <Style.Name>{props.title}</Style.Name>
+            <Style.Text>
+              {props.year} {props.language}
+            </Style.Text>
             <Style.Card1
               src={
                 props.medium_cover_image
@@ -20,12 +24,7 @@ const Film: React.FC<MovieList> = (props) => {
             ></Style.Card1>
 
             <Style.Card2>
-              <Style.Rating>
-                <Style.RatingIcon>
-                  <VscStarFull />
-                </Style.RatingIcon>
-                <Style.RatingText> {props.rating} / 10</Style.RatingText>
-              </Style.Rating>
+              <Style.Details>DETAILS</Style.Details>
 
               {props.genres ? (
                 <Style.Genres>
@@ -54,16 +53,15 @@ const Film: React.FC<MovieList> = (props) => {
               ) : (
                 ""
               )}
-
-              <Style.Details>DETAILS</Style.Details>
+              
+              <Style.Rating>
+                <Style.RatingIcon>
+                  <VscStarFull />
+                </Style.RatingIcon>
+                <Style.RatingText> {props.rating} / 10</Style.RatingText>
+              </Style.Rating>
             </Style.Card2>
           </Style.Cards>
-
-          <Style.Name>{props.title}</Style.Name>
-
-          <Style.Text>
-            {props.year} {props.language}
-          </Style.Text>
         </Style.Content>
       </Link>
     </Style.Film>
